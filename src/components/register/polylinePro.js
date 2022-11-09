@@ -1,5 +1,7 @@
 import { PolylineEdge, PolylineEdgeModel, h } from '@logicflow/core';
 import { ArrorList } from '../config';
+import custome2Url from '../../assets/custome2.png';
+import custome3Url from '../../assets/custome3.png';
 
 class Model extends PolylineEdgeModel {
   // 展示起点箭头
@@ -44,7 +46,7 @@ class View extends PolylineEdge {
         y: -10,
         width: 20,
         height: 20,
-        xlinkHref: 'src/assets/custome2.png',
+        xlinkHref: custome2Url,
         transform: 'rotate(180)'
       })
     } else if (pathAttr.type === 'custome3') {
@@ -53,7 +55,7 @@ class View extends PolylineEdge {
         y: -15,
         width: 30,
         height: 30,
-        xlinkHref: 'src/assets/custome3.png',
+        xlinkHref: custome3Url,
         transform: 'rotate(180)'
       })
     } else if (pathAttr.d) {
@@ -101,7 +103,8 @@ class View extends PolylineEdge {
         y: -10,
         width: 20,
         height: 20,
-        xlinkHref: 'src/assets/custome2.png'
+        // xlinkHref: 'src/assets/custome2.png'
+        xlinkHref: custome2Url,
       })
     } else if (pathAttr.type === 'custome3') {
       return  h('image', {
@@ -109,7 +112,8 @@ class View extends PolylineEdge {
         y: -15,
         width: 30,
         height: 30,
-        xlinkHref: 'src/assets/custome3.png',
+        // xlinkHref: 'src/assets/custome3.png',
+        xlinkHref: custome3Url,
       })
     } else if (pathAttr.d) {
       if (pathAttr.fill) {
